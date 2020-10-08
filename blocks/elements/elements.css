@@ -1,0 +1,20 @@
+.elements{
+	margin: 127px auto 0;
+	display: grid;
+	grid-template-columns: repeat(3, 282px);
+	gap: 21px;
+	justify-content: center;
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px){
+	.elements{
+		grid-template-columns: repeat(2, 282px);
+	}
+	
+}
+
+@media screen and (max-width: 585px){
+	.elements{
+		grid-template-columns: repeat(1, 282px);
+	}
+}

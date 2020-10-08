@@ -1,0 +1,14 @@
+.header{
+	position: relative;
+	top: 45px;
+	border-bottom: 1px solid #545454;
+	height: 74px;
+
+}
+
+@media screen and (max-width: 900px){
+	.header{
+		top: 28px;
+		height: 54px;
+	}
+}
