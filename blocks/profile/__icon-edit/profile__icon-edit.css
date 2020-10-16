@@ -1,0 +1,10 @@
+.profile__icon-edit{
+	border: 1px solid #FFFFFF;
+	padding: 7px;
+}
+
+.profile__icon-edit:hover{
+	opacity: 0.6;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}

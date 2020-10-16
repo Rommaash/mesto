@@ -1,7 +1,16 @@
 .element__info-btn{
+	background-image: url(../../../images/like.svg);
+	width: 21px;
+	height: 20px;
+	background-repeat: no-repeat;
+	background-size: contain;
 	align-self: baseline;
 	border: none;
 	background-color: white;
 	padding: 0;
 	margin-top: 6px;
+}
+
+.element__info-btn:hover{
+	opacity: 0.6;
 }

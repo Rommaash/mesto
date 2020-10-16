@@ -20,10 +20,12 @@
 					<h1 class="profile__title">Жак-Ив Кусто</h1>
 					<p class="profile__subtitle">Исследователь океана</p>
 				</div>
-				<button class="profile__button_edit">
+				<button type="button" class="profile__button_edit">
+					<img class="profile__icon-edit" src="images/VectorEdit.svg" alt="ПЛюс">
 				</button>
 			</div>
-			<button class="profile__button_add">
+			<button type="button" class="profile__button_add">
+				<img class="profile__icon-add" src="images/AddButton.svg" alt="ПЛюс">
 			</button>
 		</section>
 		<section class="elements">
@@ -31,8 +33,7 @@
 				<img src="images/karachaevsk.jpg" alt="Карачаевск" class="element__image">
 				<div class="element__info">
 					<h2 class="element__info-text">Карачаевск</h2>
-					<button class="element__info-btn">
-						<img src="images/like.svg" alt="Лайк" class="btn__like">
+					<button type="button" class="element__info-btn">
 					</button>
 				</div>
 			</div>
@@ -40,8 +41,7 @@
 				<img src="images/elbrus.jpg" alt="Эльбрус" class="element__image">
 				<div class="element__info">
 					<h2 class="element__info-text">Гора Эльбрус</h2>
-					<button class="element__info-btn">
-						<img src="images/like.svg" alt="Лайк" class="btn__like">
+					<button type="button" class="element__info-btn">
 					</button>
 				</div>
 			</div>
@@ -49,8 +49,7 @@
 				<img src="images/dombai.jpg" alt="Домбай" class="element__image">
 				<div class="element__info">
 					<h2 class="element__info-text">Домбай</h2>
-					<button class="element__info-btn">
-						<img src="images/like.svg" alt="Лайк" class="btn__like">
+					<button type="button" class="element__info-btn">
 					</button>
 				</div>
 			</div>
@@ -58,8 +57,7 @@
 				<img src="images/elbrus.jpg" alt="Эльбрус" class="element__image">
 				<div class="element__info">
 					<h2 class="element__info-text">Гора Эльбрус</h2>
-					<button class="element__info-btn">
-						<img src="images/like.svg" alt="Лайк" class="btn__like">
+					<button type="button" class="element__info-btn">
 					</button>
 				</div>
 			</div>
@@ -67,8 +65,7 @@
 				<img src="images/dombai.jpg" alt="Домбай" class="element__image">
 				<div class="element__info">
 					<h2 class="element__info-text">Домбай</h2>
-					<button class="element__info-btn">
-						<img src="images/like.svg" alt="Лайк" class="btn__like">
+					<button type="button" class="element__info-btn">
 					</button>
 				</div>
 			</div>
@@ -76,8 +73,7 @@
 				<img src="images/karachaevsk.jpg" alt="Карачаево-Черногорье" class="element__image">
 				<div class="element__info">
 					<h2 class="element__info-text">Карачаево-Черногорье</h2>
-					<button class="element__info-btn">
-						<img src="images/like.svg" alt="Лайк" class="btn__like">
+					<button type="button" class="element__info-btn">
 					</button>
 				</div>
 			</div>
@@ -87,12 +83,14 @@
 		</footer>
 		<div class="popup">
 			<div class="popup__container">
-				<button class="popup__close"></button>
+				<button type="button" class="popup__close">
+					<img class="popup__close-icon" src="images/CloseIcon.svg" alt="Закрыть">
+				</button>
 				<h3 class="popup__container-title">Редактировать профиль</h3>
-				<form action="" class="popup__form">
-					<input type="text" value="" class="popup__input pupup__input_name">
-					<input type="text" value="" class="popup__input pupup__input_job">
-					<button class="popup__button" value="submit">Сохранить</button>
+				<form name="popup-form" class="popup__form">
+					<input type="text" name="Name" class="popup__input pupup__input_name">
+					<input type="text" name="job" class="popup__input pupup__input_job">
+					<button class="popup__button" type="submit" value="submit">Сохранить</button>
 				</form>
 			</div>
 		</div>
