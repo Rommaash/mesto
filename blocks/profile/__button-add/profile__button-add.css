@@ -1,22 +1,19 @@
-.profile__button_add{
+.profile__button-add{
+	position: relative;
 	align-self: baseline;
 	background: #000;
 	padding: 0;
 	border: none;
-	margin-top: 35px;
-	position: absolute;
-	right: 0;
-	
+	margin-top: 40px;
 }
 
-.profile__button_add:hover{
+.profile__button-add:hover{
 cursor: pointer;
 }
 
 @media screen and (max-width: 900px){
-	.profile__button_add{
-		position: relative;
+	.profile__button-add{
 		width: 282px;
-		margin: 0 auto;
+		margin: 16px auto 0;
 	}
 }

@@ -3,9 +3,11 @@
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 22px;
-	margin-top: 16px;
+	margin-top: 6px;
 	margin-bottom: 0;
-	
+	text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow: hidden;
 }
 
 @media screen and (max-width: 900px){
@@ -13,5 +15,7 @@
 		font-size: 14px;
 		line-height: 17px;
 		margin-bottom: 36px;
+		margin-left: 30px;
+		margin-top: -6px;
 	}
 }

@@ -8,3 +8,10 @@
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
 }
+
+@media screen and (max-width: 900px){
+	.profile__icon-edit{
+		width: 7.5px;
+		padding: 4px;
+	}
+}

@@ -4,3 +4,8 @@ margin: 25px auto 0;
 max-width: 246px;
 justify-content: space-between;
 }
+@media screen and (max-width: 900px){
+	.element__info{
+		margin-top: 20px;
+	}
+}
