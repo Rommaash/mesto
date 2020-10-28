@@ -1,6 +1,7 @@
 .profile__icon-add{
 	border: 2px solid white;
 	padding: 12px 62px;
+	z-index: 10;
 }
 
 .profile__icon-add:hover{
