@@ -66,7 +66,7 @@ function closePopup(popup) {
 
 
 
-function profileSubmitHandler(evt) {
+function HandleProfileSubmit(evt) {
 	evt.preventDefault();
 	nameInput.textContent = addNameInput.value;
 	jobInput.textContent = addJobInput.value;
@@ -119,7 +119,7 @@ buttonAddList.addEventListener('click', () => {
 	openPopup(popupElement);
 });
 
-formElement.addEventListener('click', profileSubmitHandler)
+formElement.addEventListener('click', HandleProfileSubmit)
 
 
 buttonCloseList.forEach((button) => {
