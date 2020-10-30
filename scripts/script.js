@@ -92,7 +92,7 @@ function createCard(element) {
 	cardElement.querySelector('.element__info-text').textContent = element.name;
 	cardElement.querySelector('.element__image').src = element.link;
 	cardElement.querySelector('.element__info-btn').addEventListener('click', (event) => {
-		event.target.classList.toggle('element__icon_active');
+		event.target.classList.toggle('element__info-btn_active');
 	});
 	cardElement.querySelector('.element__delete').addEventListener('click', (event) => {
 		event.target.closest('.element').remove();

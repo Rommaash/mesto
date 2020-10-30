@@ -23,6 +23,7 @@
 @import url("../blocks/element/__info/element__info.css");
 @import url("../blocks/element/__info-text/element__info-text.css");
 @import url("../blocks/element/__info-btn/element__info-btn.css");
+@import url("../blocks/element/__info-btn/_active/element__info-btn_active.css");
 @import url("../blocks/element/__delete/element__delete.css");
 
 @import url("../blocks/footer/footer.css");
