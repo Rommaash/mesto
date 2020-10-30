@@ -5,6 +5,7 @@
 	top: -50px;
 	border: none;
 	background: none;
+	z-index: 30;
 }
 
 .popup__close:hover{
