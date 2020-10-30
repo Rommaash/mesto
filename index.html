@@ -31,7 +31,7 @@
 		<section class="elements">
 			<template id="element">
 				<article class="element">
-					<img alt="" class="element__image">
+					<img class=" element__image">
 					<div class="element__info">
 						<h3 class="element__info-text"></h3>
 						<button type="button" class="element__info-btn"></button>
@@ -52,8 +52,8 @@
 				</button>
 				<h3 class="popup__container-title">Редактировать профиль</h3>
 				<form action="#" name="form" class="popup__form">
-					<input type="text" name="Name" class="popup__input popup__input_type_name">
-					<input type="text" name="job" class="popup__input popup__input_type_job">
+					<input required type="text" name="Name" class="popup__input popup__input_type_name">
+					<input required type="text" name="job" class="popup__input popup__input_type_job">
 					<button class="popup__button" type="submit" value="submit">Сохранить</button>
 				</form>
 			</div>
@@ -66,14 +66,14 @@
 				<button type="button" class="popup__close">
 					<img class="popup__close-icon" src="images/close.svg" alt="Закрыть">
 				</button>
-				<h3 class="popup__container-title">Новое место</h2>
-					<form action="#" name="form" class="popup__form">
-						<input type="text" name="PopName" class="popup__input popup__input_type_name" placeholder="Название"
-							id="cardname">
-						<input type="url" name="PopText" class="popup__input popup__input_type_job"
-							placeholder="Ссылка на картинку" id="cardlink">
-						<button type="submit" class="popup__button">Сохранить</button>
-					</form>
+				<h3 class="popup__container-title">Новое место</h3>
+				<form action="#" name="form" class="popup__form">
+					<input required type="text" name="PopName" class="popup__input popup__input_type_name"
+						placeholder="Название" id="cardname">
+					<input required type="url" name="PopText" class="popup__input popup__input_type_job"
+						placeholder="Ссылка на картинку" id="cardlink">
+					<button type="submit" class="popup__button">Сохранить</button>
+				</form>
 			</div>
 		</div>
 

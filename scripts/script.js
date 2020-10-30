@@ -29,11 +29,9 @@ const initialCards = [
 
 
 const popupProfile = document.querySelector('.popup__profile');
-const buttonEdit = document.querySelector('.profile__button-edit');
-const butttonAdd = document.querySelector('.profile__button-add')
-const buttonClose = document.querySelectorAll('.popup__close');
-const popupOpen = document.querySelector('.popup_opened');
-const popupSubmit = document.querySelector('.popup__button');
+const buttonEditList = document.querySelector('.profile__button-edit');
+const buttonAddList = document.querySelector('.profile__button-add')
+const buttonCloseList = document.querySelectorAll('.popup__close');
 const nameInput = document.querySelector('.profile__title');
 const jobInput = document.querySelector('.profile__subtitle');
 const addNameInput = document.querySelector('.popup__input_type_name');
@@ -52,10 +50,10 @@ const hugeImg = document.querySelector('.popup__img-photo');
 
 
 
-function profileInfo() {
+const handlePopupProfile = () => {
 	addNameInput.value = nameInput.textContent;
 	addJobInput.value = jobInput.textContent;
-}
+};
 
 function openPopup(popup) {
 	popup.classList.add('popup_opened');
@@ -63,7 +61,7 @@ function openPopup(popup) {
 
 function closePopup(popup) {
 	popup.classList.remove('popup_opened');
-};
+}
 
 
 
@@ -73,10 +71,10 @@ function profileSubmitHandler(evt) {
 	nameInput.textContent = addNameInput.value;
 	jobInput.textContent = addJobInput.value;
 	closePopup(popupProfile);
-};
+}
 
 function submitElement(evt) {
-	let newCard = {
+	const newCard = {
 		name: cardName.value,
 		link: cardLink.value,
 	};
@@ -84,42 +82,47 @@ function submitElement(evt) {
 	elements.prepend(createCard(newCard));
 	evt.preventDefault();
 }
+const removeElement = (event) => {
+	event.target.closest('.element').remove();
+};
+
 
 function createCard(element) {
-	let cardElement = elementContent.cloneNode(true);
-	let cardElementImage = cardElement.querySelector('.element__image');
+	const cardElement = elementContent.cloneNode(true);
+	const cardElementImage = cardElement.querySelector('.element__image');
 
 	cardElement.querySelector('.element__info-text').textContent = element.name;
 	cardElement.querySelector('.element__image').src = element.link;
+	cardElement.querySelector('.element__image').alt = element.name;
 	cardElement.querySelector('.element__info-btn').addEventListener('click', (event) => {
 		event.target.classList.toggle('element__info-btn_active');
 	});
-	cardElement.querySelector('.element__delete').addEventListener('click', (event) => {
-		event.target.closest('.element').remove();
-	});
-	cardElement.querySelector('.element__image').addEventListener('click', function () {
+
+	cardElement.querySelector('.element__delete').addEventListener('click', removeElement);
+	cardElementImage.addEventListener('click', function () {
 		hugeImg.src = cardElementImage.src;
+		hugeImg.alt = element.name;
 		popImageText.textContent = element.name;
 		openPopup(popupImage);
 	});
 
 	return cardElement;
-};
+}
 
 
-buttonEdit.addEventListener('click', () => {
-	profileInfo();
+buttonEditList.addEventListener('click', () => {
+	handlePopupProfile();
 	openPopup(popupProfile);
 });
 
-butttonAdd.addEventListener('click', () => {
+buttonAddList.addEventListener('click', () => {
 	openPopup(popupElement);
 });
 
 formElement.addEventListener('click', profileSubmitHandler)
 
 
-buttonClose.forEach((button) => {
+buttonCloseList.forEach((button) => {
 	button.addEventListener('click', (event) => {
 		closePopup(event.target.closest('.popup'));
 	});
