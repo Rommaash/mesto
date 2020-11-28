@@ -17,8 +17,9 @@ margin-bottom: 36px;
 }
 
 .popup__button:hover{
-	background: rgba(0, 0, 0, 0.8);
-	border-radius: 2px;
+	transition: 1s linear;
+	opacity: 0.8;
+	border-radius: 10px;
 }
 
 @media screen and (max-width: 585px){
