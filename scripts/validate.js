@@ -40,9 +40,13 @@ function setButtonState(button, isActive, config) {
 		button.disabled = false;
 
 	} else {
-		button.classList.add(config.inactiveButtonClass);
-		button.disabled = true;
+		disableButton(button, config);
 	}
+}
+
+function disableButton(button, config) {
+	button.classList.add(config.inactiveButtonClass);
+	button.disabled = true;
 }
 
 
@@ -66,6 +70,7 @@ function enableValidation(config) {
 
 		form.addEventListener('submit', (evt) => {
 			evt.preventDefault();
+			disableButton(submitButton, config);
 		});
 
 		const submitButton = form.querySelector(config.submitButtonSelector);

@@ -13,7 +13,7 @@ const jobInput = document.querySelector('.profile__subtitle');
 const addNameInput = document.querySelector('.popup__input_type_name');
 const addJobInput = document.querySelector('.popup__input_type_job');
 
-
+const formAdd = document.querySelector('.popup__form_add')
 const formElement = document.querySelector(".popup__button");
 const popImageText = document.querySelector('.popup__img-text');
 const popupElement = document.querySelector('.popup__element');
@@ -76,6 +76,7 @@ function submitElement(evt) {
 	closePopup(popupElement);
 	elements.prepend(createCard(newCard));
 	evt.preventDefault();
+	formAdd.reset();
 }
 
 const removeElement = (event) => {
@@ -87,8 +88,8 @@ function createCard(element) {
 	const cardElement = elementContent.cloneNode(true);
 	const cardElementImage = cardElement.querySelector('.element__image');
 	cardElement.querySelector('.element__info-text').textContent = element.name;
-	cardElement.querySelector('.element__image').src = element.link;
-	cardElement.querySelector('.element__image').alt = element.name;
+	cardElementImage.src = element.link;
+	cardElementImage.alt = element.name;
 	cardElement.querySelector('.element__info-btn').addEventListener('click', (event) => {
 		event.target.classList.toggle('element__info-btn_active');
 	});
