@@ -2,7 +2,7 @@ import { FormValidator, validationConfig } from './validate.js';
 import { initialCards } from './initial-cards.js';
 import { Card } from './Card.js';
 
-const popupProfile = document.querySelector('.popup__profile');
+const popupProfile = document.querySelector('.popup_profile');
 const buttonEditList = document.querySelector('.profile__button-edit');
 const buttonAddList = document.querySelector('.profile__button-add')
 const buttonCloseList = document.querySelectorAll('.popup__close');
@@ -14,7 +14,7 @@ const addJobInput = document.querySelector('.popup__input_type_job');
 const formEdit = document.querySelector('.popup__form_edit');
 const formAdd = document.querySelector('.popup__form_add');
 const formElement = document.querySelector(".popup__button");
-const popupElement = document.querySelector('.popup__element');
+const popupElement = document.querySelector('.popup_element');
 const cardName = popupElement.querySelector('#cardname');
 const cardLink = popupElement.querySelector('#cardlink');
 const popupAll = document.querySelectorAll('.popup');
@@ -75,7 +75,7 @@ function submitElement(evt) {
 		link: cardLink.value,
 	});
 	const card = newCard.generateCard();
-	document.querySelector('.elements').append(card);
+	document.querySelector('.elements').prepend(card);
 	closePopup(popupElement);
 
 	formAdd.reset();
