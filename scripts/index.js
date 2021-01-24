@@ -80,7 +80,7 @@ function handleProfileSubmit(evt) {
 }
 
 
-function CreateCard(data) {
+function сreateCard(data) {
 	const card = new Card({ name: data.name, link: data.link }, element, handleCardClick);
 	const cardElement = card.generateCard();
 	return cardElement;
@@ -96,14 +96,14 @@ function handleCardClick(name, link) {
 }
 
 initialCards.forEach((item) => {
-	const cardElement = CreateCard(item);
+	const cardElement = сreateCard(item);
 	elementsContainer.append(cardElement);
 })
 
 
 function submitElement(evt) {
 	evt.preventDefault();
-	const cardElement = CreateCard({ name: cardName.value, link: cardLink.value });
+	const cardElement = сreateCard({ name: cardName.value, link: cardLink.value });
 	elementsContainer.prepend(cardElement);
 	closePopup(popupElement);
 	formAdd.reset();

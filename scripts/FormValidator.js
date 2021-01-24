@@ -50,12 +50,9 @@ export class FormValidator {
 			this._submitButton.classList.remove(this._inactiveButtonClass);
 			this._submitButton.disabled = false;
 		} else {
-			this._disableButton()
+			this._submitButton.classList.add(this._inactiveButtonClass);
+			this._submitButton.disabled = true;
 		}
-	}
-	_disableButton() {
-		this._submitButton.classList.add(this._inactiveButtonClass);
-		this._submitButton.disabled = true;
 	}
 
 	_setEventListeners() {
@@ -73,7 +70,7 @@ export class FormValidator {
 		});
 
 		this._setButtonState(this._form.checkValidity());
-		this._disableButton();
+
 	}
 
 
