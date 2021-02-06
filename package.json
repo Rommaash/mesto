@@ -1,0 +1,19 @@
+{
+  "name": "mesto",
+  "version": "1.0.0",
+  "description": "1. Адаптивная верстка.\r 2. Изменение информации в профиле.\r 3.\tдобавление/удаление карточек.\r 4. Валидация форм.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rommaash/mesto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rommaash/mesto/issues"
+  },
+  "homepage": "https://github.com/Rommaash/mesto#readme"
+}
