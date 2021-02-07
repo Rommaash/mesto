@@ -11,8 +11,8 @@ export class UserInfo {
 		};
 	}
 
-	setUserInfo(name, info) {
-		this._name.textContent = name.value;
-		this._info.textContent = info.value;
+	setUserInfo({ editName, editJob }) {
+		this._name.textContent = editName;
+		this._info.textContent = editJob;
 	}
 }

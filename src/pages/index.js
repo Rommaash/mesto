@@ -52,19 +52,19 @@ function createCard(item) {
 
 const popupWithProfileForm = new PopupWithForm({
 	popupSelector: popupProfile,
-	handlerFormSubmit: () => {
-		userInfo.setUserInfo(addNameInput, addJobInput);
+	handlerFormSubmit: (data) => {
+		userInfo.setUserInfo(data);
 		popupWithProfileForm.close();
 	}
 }
 );
 const popupWithCardForm = new PopupWithForm({
 	popupSelector: popupElement,
-	handlerFormSubmit: () => {
+	handlerFormSubmit: (data) => {
 		createCard({
-			link: cardLink.value,
-			alt: cardName.value,
-			name: cardName.value
+			link: data.popText,
+			alt: data.popName,
+			name: data.popName
 		});
 
 		popupWithCardForm.close();
