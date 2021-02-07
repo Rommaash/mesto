@@ -37,7 +37,7 @@ export class Card {
 			this._handleLike();
 		});
 	}
-	_deleteElement = () => {
+	_deleteElement() {
 		this._element.remove();
 	}
 	_handleLike() {
