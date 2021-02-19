@@ -109,9 +109,10 @@
 					<img class="popup__close-icon" src="<%=require('./images/close.svg')%>" alt="Закрыть">
 				</button>
 				<h3 class="popup__container-title">Обновить аватар</h3>
-				<form action="submit" name="formAvatar" class="popup__form">
+				<form action="submit" name="formAvatar" class="popup__form popup__form_avatar">
 					<input required type="url" name="avatarLink" class="popup__input" placeholder="Добавить ссылку"
 						id="avatar">
+					<span id="avatar-error" class="popup__span-error"> </span>
 					<button type="submit" class="popup__button">Сохранить</button>
 				</form>
 			</div>

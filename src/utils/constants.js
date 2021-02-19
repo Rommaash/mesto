@@ -53,6 +53,7 @@ const deleteConfirm = document.querySelector('.popup_confirm');
 const profileImage = document.querySelector('.profile__image');
 const avatar = document.querySelector('.popup_avatar');
 const profileButton = document.querySelector('.profile__button');
+const formAvatar = document.querySelector('.popup__form_avatar');
 export {
 	initialCards,
 	popupProfile,
@@ -75,4 +76,5 @@ export {
 	profileImage,
 	avatar,
 	profileButton,
+	formAvatar
 };

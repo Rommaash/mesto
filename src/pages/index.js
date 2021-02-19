@@ -27,6 +27,7 @@ import {
 	profileImage,
 	avatar,
 	profileButton,
+	formAvatar,
 } from '../utils/constants.js';
 
 const api = new Api({
@@ -71,6 +72,8 @@ const popupAvatar = new PopupWithForm({
 			})
 	}
 })
+const avatarValidation = new FormValidator(validationConfig, formAvatar);
+avatarValidation.enableValidation()
 popupAvatar.setEventListeners();
 
 
