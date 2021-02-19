@@ -49,7 +49,10 @@ const cardLink = popupElement.querySelector('#cardlink');
 const elementsContainer = document.querySelector('.elements');
 const element = document.querySelector('.template');
 const popupImage = document.querySelector('.popup_img');
-
+const deleteConfirm = document.querySelector('.popup__confirm');
+const profileImage = document.querySelector('.profile__image');
+const avatar = document.querySelector('.popup__avatar');
+const profileButton = document.querySelector('.profile__button');
 export {
 	initialCards,
 	popupProfile,
@@ -67,5 +70,9 @@ export {
 	elementsContainer,
 	element,
 	popupImage,
-	validationConfig
+	validationConfig,
+	deleteConfirm,
+	profileImage,
+	avatar,
+	profileButton,
 };

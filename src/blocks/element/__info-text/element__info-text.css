@@ -8,6 +8,7 @@
 	max-width: 185px;
 	white-space: nowrap;
 	overflow: hidden;
+	margin-top: 20px;
 	}
 
 	@media screen and (max-width: 900px){

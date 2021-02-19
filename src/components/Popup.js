@@ -9,7 +9,7 @@ export class Popup {
 	open() {
 		this._popup.classList.add('popup_opened');
 		document.addEventListener('click', this._handleOverlayClose);
-		document.addEventListener('keydown', this._handleOverlayClose);
+		document.addEventListener('keydown', this._handleEscClose);
 	}
 
 	close() {
