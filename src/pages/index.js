@@ -123,6 +123,7 @@ const popupWithProfileForm = new PopupWithForm({
 );
 
 const popupWithButton = new ConfirmDelete(deleteConfirm);
+popupWithButton.setEventListeners();
 
 const removeCard = (card) => {
 	return () => {
@@ -140,8 +141,8 @@ function createCard({ name, link, likes, owner, _id }) {
 			popupWithImage.open({ name, link });
 		},
 		() => {
-			popupWithButton.setEventListeners(removeCard(card));
-			popupWithButton.open();
+			popupWithButton.open(removeCard(card));
+
 		},
 		() => {
 			api.like(card.returnCardId())
