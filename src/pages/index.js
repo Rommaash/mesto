@@ -38,9 +38,7 @@ const api = new Api({
 	}
 });
 
-profileButton.addEventListener('click', () => {
-	popupAvatar.open()
-})
+
 
 
 
@@ -193,6 +191,9 @@ buttonEditList.addEventListener('click', () => {
 	addJobInput.value = profileInfo.about;
 });
 
+profileButton.addEventListener('click', () => {
+	popupAvatar.open()
+})
 
 const popupWithImage = new PopupWithImage(popupImage);
 popupWithImage.setEventListeners();
